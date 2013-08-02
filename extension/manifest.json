@@ -1,6 +1,6 @@
 {
-  "name": "__MSG_extName__ (Internal-only Chrome WebUI version)",
-  "version": "2.1",
+  "name": "Accessibility Developer Tools (Chrome WebUI)",
+  "version": "2.4",
   "description": "Accessibility audit and element properties.",
   "default_locale": "en",
   "icons": {

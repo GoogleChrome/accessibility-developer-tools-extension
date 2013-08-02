@@ -13,6 +13,7 @@
 // limitations under the License.
 
 goog.require('axs.AuditRule');
+goog.require('axs.content');
 goog.require('base');
 
 goog.provide('axs.ExtensionAuditRule');
@@ -48,9 +49,10 @@ axs.ExtensionAuditRule.prototype.runInDevtools = function(resultsCallback) {
     function addEventListener(uniqueEventName, test) {
         function handleEventListenersEvent(event) {
             var element = event.target;
+            console.log(element, 'is relevant');
             window.relevantNodes.push(element);
             if (test(element))
-                this.addNode(window.failingNodes, element);
+                window.failingNodes.push(axs.content.convertNodeToResult(element));
         }
         window.relevantNodes = [];
         window.failingNodes = [];

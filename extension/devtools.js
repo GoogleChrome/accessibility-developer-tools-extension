@@ -79,6 +79,8 @@ if (chrome.devtools.inspectedWindow.tabId)
                                    command: 'injectContentScripts' }, init);
 
 function handleResults(auditResults, auditRule, severity, frameURL, results, isException) {
+    if (auditRule == axs.ExtensionAuditRules.getRule('unfocusableElementsWithOnClick'))
+        console.log('got results', results);
     auditResults.resultsPending--;
     if (isException) {
         console.warn(auditRule.name, 'had an error: ', results);

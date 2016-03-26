@@ -20,7 +20,7 @@ h2, h3 {
   margin-bottom: 0.8em;
 }
 
-fieldset#audit-rules {
+fieldset#audit-rules, fieldset#external-rulesets {
   border: 0 none;
   padding-top: 0;
 }
